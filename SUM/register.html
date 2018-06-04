@@ -8,6 +8,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>SUM The Best Shopping Choice</title>
+<style type="text/css">
+            span
+            {
+                color: white;
+                font-style: italic;
+            }
+        </style>
+        
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,7 +23,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-function hideURLbar(){ window.scrollTo(0,1); } </script>
+function hideURLbar(){ window.scrollTo(0,1); } 
+function compare() 
+            {
+                var pwd=document.getElementById('p').value;
+                var cpwd=document.getElementById('cp').value;
+
+                if (pwd!=cpwd) 
+                {
+                    document.getElementById('error').style.color='red';
+                }
+                else
+                {
+                    document.getElementById('error').style.color='white';   
+                }
+            }
+</script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
@@ -62,6 +85,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			});
 		});
 		</script>
+
+ 
 <!---//End-rate---->
 
 </head>
@@ -79,7 +104,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<li><a href="wishlist.html" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
 					<li><a href="login.html" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
 					<li><a href="register.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
-				</ul>	
+				</ul>		
 			</div>
 			
 			<div class="header-ri">
@@ -254,22 +279,28 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>			
 </div>
   <!---->
- <!--banner-->
+
+     <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h3 >Login</h3>
-		<h4><a href="index.html">Home</a><label>/</label>Login</h4>
+		<h3 >Register</h3>
+		<h4><a href="index.html">Home</a><label>/</label>Register</h4>
 		<div class="clearfix"> </div>
 	</div>
 </div>
+
 <!--login-->
 
 	<div class="login">
-	
 		<div class="main-agileits">
-				<div class="form-w3agile">
-					<h3>Login</h3>
-					<form action="#" method="post">
+				<div class="form-w3agile form1">
+					<h3>Register</h3>
+					<form action="register.php" method="post">
+						<div class="key">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<input  type="text" value="Username" name="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+							<div class="clearfix"></div>
+						</div>
 						<div class="key">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 							<input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
@@ -277,17 +308,23 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						</div>
 						<div class="key">
 							<i class="fa fa-lock" aria-hidden="true"></i>
-							<input  type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+							<input  type="password" value="Password" name="Password" id="p" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
 							<div class="clearfix"></div>
 						</div>
-						<input type="submit" value="Login">
+						<div class="key">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+							<input  type="password" value="Confirm Password" name="ConfirmPassword" id="cp" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}"  onkeyup="compare();" required="">
+ 
+
+							<div class="clearfix"></div>
+						</div>
+						<span id="error">* not match</span>
+						<br>
+						<input type="submit" value="Submit">
 					</form>
+					
 				</div>
-				<div class="forg">
-					<a href="#" class="forg-left">Forgot Password</a>
-					<a href="register.html" class="forg-right">Register</a>
-				<div class="clearfix"></div>
-				</div>
+				
 			</div>
 		</div>
 <!--footer-->
@@ -343,7 +380,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<p><i class="fa fa-home" aria-hidden="true"></i>123,Shukan Complex,<br>Near Silver Star, Chandlodiya,<br>Ahmedabad</p>
 					</div>
 					<div class="col-md-4 fo-grid1">
-							<p><i class="fa fa-phone" aria-hidden="true"></i>+91 96 62 106062 , +91 95 58 847265 ,<br> +91 97 23 245240</p>	
+							<p><i class="fa fa-phone" aria-hidden="true"></i>+91 96 62 106062 , +91 95 58 847265 , <br>+91 97 23 245240</p>	
 					</div>
 					<div class="col-md-4 fo-grid1">
 						<p><a href="mailto:info@example.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>sum123@gmail.com</a></p>
@@ -353,7 +390,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					</div>
 			</div>
 		<div class="copy-right">
-			<p> &copy; 2016 SUM Shopping. All Rights Reserved | Design by Team SUM Developer</p>
+			<p> &copy;2016 SUM Shopping. All Rights Reserved | Design by Team SUM Developer</p>
 		</div>
 	</div>
 </div>
